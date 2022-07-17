@@ -12,7 +12,7 @@
         <module>common</module>
         <module>model</module>
         <module>service</module>
-        <module>service/servie_user</module>
+        <module>service/service_user</module>
     </modules>
     <!--    <modules>-->
 <!--        <module>common</module>-->
