@@ -1,4 +1,4 @@
-package jw.hospital.vo.msm;
+package jw.hospital.yygh.vo.msm;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

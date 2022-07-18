@@ -1,4 +1,4 @@
-package jw.hospital.vo.order;
+package jw.hospital.yygh.vo.order;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

@@ -1,4 +1,4 @@
-package jw.hospital.vo.hosp;
+package jw.hospital.yygh.vo.hosp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;

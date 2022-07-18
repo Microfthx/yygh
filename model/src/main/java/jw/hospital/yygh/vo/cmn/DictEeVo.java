@@ -1,4 +1,4 @@
-package jw.hospital.vo.cmn;
+package jw.hospital.yygh.vo.cmn;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.Data;

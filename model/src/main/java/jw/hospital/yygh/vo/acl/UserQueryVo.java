@@ -1,4 +1,4 @@
-package jw.hospital.vo.acl;
+package jw.hospital.yygh.vo.acl;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

@@ -1,4 +1,4 @@
-package jw.hospital.vo.user;
+package jw.hospital.yygh.vo.user;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;

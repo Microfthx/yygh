@@ -1,4 +1,4 @@
-package jw.hospital.vo.hosp;
+package jw.hospital.yygh.vo.hosp;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

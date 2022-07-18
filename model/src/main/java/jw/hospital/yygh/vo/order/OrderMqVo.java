@@ -1,6 +1,6 @@
-package jw.hospital.vo.order;
+package jw.hospital.yygh.vo.order;
 
-import jw.hospital.vo.msm.MsmVo;
+import jw.hospital.yygh.vo.msm.MsmVo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
