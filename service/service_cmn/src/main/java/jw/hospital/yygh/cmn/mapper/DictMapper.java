@@ -1,4 +1,4 @@
-package jw.hopistal.yygh.cmn.mapper;
+package jw.hospital.yygh.cmn.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import jw.hospital.yygh.model.cmn.Dict;

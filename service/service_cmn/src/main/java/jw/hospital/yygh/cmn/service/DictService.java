@@ -1,4 +1,4 @@
-package jw.hopistal.yygh.cmn.service;
+package jw.hospital.yygh.cmn.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import jw.hospital.yygh.model.cmn.Dict;

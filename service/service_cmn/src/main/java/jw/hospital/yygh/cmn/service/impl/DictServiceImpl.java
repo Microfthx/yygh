@@ -1,9 +1,9 @@
-package jw.hopistal.yygh.cmn.service.impl;
+package jw.hospital.yygh.cmn.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import jw.hopistal.yygh.cmn.mapper.DictMapper;
-import jw.hopistal.yygh.cmn.service.DictService;
+import jw.hospital.yygh.cmn.mapper.DictMapper;
+import jw.hospital.yygh.cmn.service.DictService;
 import jw.hospital.yygh.model.cmn.Dict;
 import org.springframework.stereotype.Service;
 
