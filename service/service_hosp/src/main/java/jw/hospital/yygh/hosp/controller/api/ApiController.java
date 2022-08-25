@@ -1,0 +1,71 @@
+package jw.hospital.yygh.hosp.controller.api;
+
+import com.alibaba.fastjson.JSONObject;
+import io.swagger.annotations.Api;
+import jw.hospital.yygh.common.helper.HttpRequestHelper;
+import jw.hospital.yygh.common.result.Result;
+import jw.hospital.yygh.common.result.ResultCodeEnum;
+import jw.hospital.yygh.common.utils.MD5;
+import jw.hospital.yygh.hosp.service.HospitalService;
+import jw.hospital.yygh.hosp.service.HospitalSetService;
+import jw.hospital.yygh.model.hosp.Hospital;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.HttpRequestHandler;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * @author HXLY
+ * @PackageName: jw.hospital.yygh.hosp.controller.api
+ * @Description:
+ * @date 2022/08/25 14:05
+ */
+@Api(tags = "医院api")
+@RestController
+@RequestMapping("/api/hosp")
+@CrossOrigin
+public class ApiController {
+
+    @Autowired
+    private HospitalService hospitalService;
+
+    @Autowired
+    private HospitalSetService hospitalSetService;
+
+    @PostMapping("saveHospital")
+    public Result saveHosp(HttpServletRequest request){
+        Map<String,String[]> requestMap = request.getParameterMap();
+        Map<String,Object> paramMap= HttpRequestHelper.switchMap(requestMap);
+
+        //获取签名
+        String sign = (String) paramMap.get("sign");
+
+        String hosCode = (String) paramMap.get("hoscode");
+
+        String signKey = hospitalSetService.getSignKey(hosCode);
+
+        String signKeyMd5 = MD5.encrypt(signKey);
+        if(!sign.equals(signKeyMd5)){
+//            throw new YyghException(ResultCodeEnum.SIGN_ERROR);
+            return Result.fail();
+        }
+        String logoData = (String)paramMap.get("logoData");
+        logoData = logoData.replaceAll(" ","+");
+        paramMap.put("logoData",logoData);
+        //调用service方法
+        hospitalService.save(paramMap);
+        return Result.ok();
+    }
+
+
+    @PostMapping("hospital/show")
+    public Result show(HttpServletRequest request){
+        List<Hospital> hospitalList = hospitalService.show();
+        JSONObject jsonObject = JSONObject.parseObject(String.valueOf(hospitalList));
+        return Result.ok(jsonObject);
+    }
+}
