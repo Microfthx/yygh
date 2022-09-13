@@ -17,5 +17,5 @@ public interface HospitalService {
 
     void save(Map<String ,Object > paramMap);
 
-    List<Hospital> show();
+    Hospital getByHoscode(String hoscode);
 }

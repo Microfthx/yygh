@@ -1,0 +1,51 @@
+2021-09-06 20:16:14.515 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Starting HospitalManageApplication on DESKTOP-K470VMD with PID 17624 (C:\Users\zhang\Desktop\Hospital-master\appointment-register\hospital-manage\target\classes started by zhang in C:\Users\zhang\Desktop\Hospital-master\appointment-register)
+2021-09-06 20:16:14.547 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - The following profiles are active: dev
+2021-09-06 20:16:14.695 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-06 20:16:14.697 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-06 20:16:18.609 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-06 20:16:19.371 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2021-09-06 20:16:19.395 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2021-09-06 20:16:19.397 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-09-06 20:16:19.397 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-09-06 20:16:19.725 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-09-06 20:16:19.725 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5027 ms
+2021-09-06 20:16:20.206 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-09-06 20:16:21.262 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-09-06 20:16:22.892 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-06 20:16:23.216 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-06 20:16:23.346 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-09-06 20:16:24.618 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-09-06 20:16:24.657 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-09-06 20:16:24.754 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-09-06 20:16:24.808 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2021-09-06 20:16:24.861 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2021-09-06 20:16:24.869 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Started HospitalManageApplication in 12.454 seconds (JVM running for 17.038)
+2021-09-06 20:43:43.144 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Starting HospitalManageApplication on DESKTOP-K470VMD with PID 17968 (C:\Users\zhang\Desktop\Hospital-master\appointment-register\hospital-manage\target\classes started by zhang in C:\Users\zhang\Desktop\Hospital-master\appointment-register)
+2021-09-06 20:43:43.163 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - The following profiles are active: dev
+2021-09-06 20:43:43.436 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-06 20:43:43.436 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-06 20:43:49.731 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-06 20:43:52.767 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2021-09-06 20:43:52.811 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2021-09-06 20:43:52.813 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-09-06 20:43:52.815 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-09-06 20:43:54.163 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-09-06 20:43:54.164 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 10727 ms
+2021-09-06 20:43:55.200 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-09-06 20:43:59.050 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-09-06 20:44:01.539 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-06 20:44:01.952 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-06 20:44:02.078 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-09-06 20:44:04.083 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-09-06 20:44:04.167 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-09-06 20:44:04.328 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-09-06 20:44:04.439 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2021-09-06 20:44:04.598 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2021-09-06 20:44:04.608 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Started HospitalManageApplication in 24.977 seconds (JVM running for 31.138)
+2021-09-06 20:47:58.994 [http-nio-9998-exec-10] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-06 20:47:59.024 [http-nio-9998-exec-10] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-09-06 20:47:59.168 [http-nio-9998-exec-10] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 142 ms
+2021-09-06 20:47:59.759 [http-nio-9998-exec-10] INFO  j.h.h.service.impl.HospitalServiceImpl - {"amount":"100","birthdate":"Sat Jun 10 00:00:00 CST 2000","districtCode":"110105","address":"北京市","hosScheduleId":"6134ba588f067176ff1610dd","provinceCode":"110000","cityCode":"110100","sex":"0","contactsCertificatesType":"","sign":"15a7f5ea2f5e7829c70c25793dc95949","hoscode":"123456789","isMarry":"0","contactsName":"","certificatesNo":"1234646351351651351","contactsPhone":"","contactsCertificatesNo":"","phone":"14458446512","reserveTime":"0","name":"张晓琪","depcode":"200040878","reserveDate":"2021-09-10","certificatesType":"10","timestamp":"1630932478297"}
+2021-09-06 20:48:00.270 [http-nio-9998-exec-10] INFO  j.h.h.service.impl.HospitalServiceImpl - {"address":"北京市","birthdate":"Sat Jun 10 00:00:00 CST 2000","certificatesNo":"1234646351351651351","certificatesType":"10","cityCode":"110100","contactsCertificatesNo":"","contactsCertificatesType":"","contactsName":"","contactsPhone":"","districtCode":"110105","isMarry":0,"name":"张晓琪","param":{},"phone":"14458446512","provinceCode":"110000","sex":0}
+2021-09-06 21:04:05.804 [http-nio-9998-exec-8] INFO  j.h.h.service.impl.HospitalServiceImpl - {"amount":"100","birthdate":"Sat Jun 10 00:00:00 CST 2000","districtCode":"110105","address":"北京市","hosScheduleId":"6134ba588f067176ff1610dd","provinceCode":"110000","cityCode":"110100","sex":"0","contactsCertificatesType":"","sign":"0cb789313b6f4f535a4f515dead62a71","hoscode":"123456789","isMarry":"0","contactsName":"","certificatesNo":"1234646351351651351","contactsPhone":"","contactsCertificatesNo":"","phone":"14458446512","reserveTime":"0","name":"张晓琪","depcode":"200040878","reserveDate":"2021-09-10","certificatesType":"10","timestamp":"1630933445596"}
+2021-09-06 21:04:05.990 [http-nio-9998-exec-8] INFO  j.h.h.service.impl.HospitalServiceImpl - {"address":"北京市","birthdate":"Sat Jun 10 00:00:00 CST 2000","certificatesNo":"1234646351351651351","certificatesType":"10","cityCode":"110100","contactsCertificatesNo":"","contactsCertificatesType":"","contactsName":"","contactsPhone":"","districtCode":"110105","isMarry":0,"name":"张晓琪","param":{},"phone":"14458446512","provinceCode":"110000","sex":0}

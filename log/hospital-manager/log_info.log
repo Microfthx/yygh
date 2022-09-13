@@ -1,0 +1,119 @@
+2022-09-13 11:09:10.501 [main] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Starting HospitalManageApplication on SH-Huangxly-733 with PID 75672 (D:\Users\HXLY\Documents\yygh\hospital-manage\target\classes started by HXLY in D:\Users\HXLY\Documents\yygh)
+2022-09-13 11:09:10.509 [main] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - The following profiles are active: dev
+2022-09-13 11:09:10.579 [main] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-13 11:09:10.579 [main] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-13 11:09:12.982 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-13 11:09:13.875 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2022-09-13 11:09:13.890 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2022-09-13 11:09:13.893 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-13 11:09:13.894 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-09-13 11:09:13.900 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2022-09-13 11:09:13.901 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2022-09-13 11:09:13.902 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-09-13 11:09:13.902 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-09-13 11:09:15.042 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2022-09-13 11:09:15.452 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-13 11:09:15.452 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4872 ms
+2022-09-13 11:09:15.726 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-13 11:09:16.035 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-13 11:09:16.624 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-13 11:09:16.722 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-13 11:09:16.765 [main] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-09-13 11:09:17.239 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-09-13 11:09:17.255 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2022-09-13 11:09:17.294 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-09-13 11:09:17.313 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2022-09-13 11:09:17.348 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2022-09-13 11:09:17.353 [main] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Started HospitalManageApplication in 8.03 seconds (JVM running for 13.949)
+2022-09-13 11:10:24.207 [http-nio-9998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-13 11:10:24.208 [http-nio-9998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-13 11:10:24.221 [http-nio-9998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2022-09-13 11:10:30.251 [http-nio-9998-exec-6] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663038630210&
+2022-09-13 11:10:32.486 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：1000_0|10|1|1663038632468|ba27058f8dcbf42c1523b4b7881a1c07
+2022-09-13 11:10:32.486 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：17042907675875c9e391acb95fa22cdf
+2022-09-13 11:10:32.505 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data limit=10&sign=17042907675875c9e391acb95fa22cdf&page=1&hoscode=1000_0&timestamp=1663038632468&
+2022-09-13 11:15:46.301 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-13 11:15:46.304 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-09-13 11:15:46.312 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-09-13 11:15:57.280 [main] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Starting HospitalManageApplication on SH-Huangxly-733 with PID 75404 (D:\Users\HXLY\Documents\yygh\hospital-manage\target\classes started by HXLY in D:\Users\HXLY\Documents\yygh)
+2022-09-13 11:15:57.282 [main] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - The following profiles are active: dev
+2022-09-13 11:15:57.343 [main] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-13 11:15:57.344 [main] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-13 11:15:59.373 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-13 11:16:00.095 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2022-09-13 11:16:00.112 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2022-09-13 11:16:00.114 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-13 11:16:00.114 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-09-13 11:16:00.117 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2022-09-13 11:16:00.118 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2022-09-13 11:16:00.118 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-09-13 11:16:00.118 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-09-13 11:16:01.214 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2022-09-13 11:16:01.614 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-13 11:16:01.614 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4270 ms
+2022-09-13 11:16:01.857 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-13 11:16:02.141 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-13 11:16:02.723 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-13 11:16:02.823 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-13 11:16:02.866 [main] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-09-13 11:16:03.297 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-09-13 11:16:03.315 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2022-09-13 11:16:03.353 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-09-13 11:16:03.375 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2022-09-13 11:16:03.411 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2022-09-13 11:16:03.415 [main] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Started HospitalManageApplication in 7.102 seconds (JVM running for 12.723)
+2022-09-13 11:16:10.725 [http-nio-9998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-13 11:16:10.725 [http-nio-9998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-13 11:16:10.733 [http-nio-9998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2022-09-13 11:16:12.807 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663038972767&
+2022-09-13 11:16:15.094 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：1000_0|10|1|1663038975076|ba27058f8dcbf42c1523b4b7881a1c07
+2022-09-13 11:16:15.095 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：636ae81c288afe03f153cd75e169839b
+2022-09-13 11:16:15.113 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data limit=10&sign=636ae81c288afe03f153cd75e169839b&page=1&hoscode=1000_0&timestamp=1663038975076&
+2022-09-13 11:16:16.111 [http-nio-9998-exec-9] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：1000_0|10|1|1663038976095|ba27058f8dcbf42c1523b4b7881a1c07
+2022-09-13 11:16:16.111 [http-nio-9998-exec-9] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：b1276bdcaeb673c84e635fe78eec3db1
+2022-09-13 11:16:16.125 [http-nio-9998-exec-9] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data limit=10&sign=b1276bdcaeb673c84e635fe78eec3db1&page=1&hoscode=1000_0&timestamp=1663038976095&
+2022-09-13 11:25:22.409 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-13 11:25:22.413 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-09-13 11:25:22.419 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-09-13 11:25:35.552 [main] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Starting HospitalManageApplication on SH-Huangxly-733 with PID 71348 (D:\Users\HXLY\Documents\yygh\hospital-manage\target\classes started by HXLY in D:\Users\HXLY\Documents\yygh)
+2022-09-13 11:25:35.554 [main] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - The following profiles are active: dev
+2022-09-13 11:25:35.610 [main] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-13 11:25:35.610 [main] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-13 11:25:37.667 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-13 11:25:38.405 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2022-09-13 11:25:38.419 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2022-09-13 11:25:38.421 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-13 11:25:38.421 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-09-13 11:25:38.423 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2022-09-13 11:25:38.424 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2022-09-13 11:25:38.424 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-09-13 11:25:38.424 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-09-13 11:25:39.515 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2022-09-13 11:25:39.912 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-13 11:25:39.913 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4302 ms
+2022-09-13 11:25:40.150 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-13 11:25:40.644 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-13 11:25:41.336 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-13 11:25:41.439 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-13 11:25:41.495 [main] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-09-13 11:25:42.041 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-09-13 11:25:42.062 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2022-09-13 11:25:42.119 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-09-13 11:25:42.145 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2022-09-13 11:25:42.186 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2022-09-13 11:25:42.191 [main] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Started HospitalManageApplication in 7.947 seconds (JVM running for 14.051)
+2022-09-13 11:26:13.831 [http-nio-9998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-13 11:26:13.831 [http-nio-9998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-13 11:26:13.838 [http-nio-9998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-09-13 11:26:15.856 [http-nio-9998-exec-9] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663039575829&
+2022-09-13 11:30:19.803 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663039819773&
+2022-09-13 13:06:24.913 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663045584878&
+2022-09-13 13:08:41.961 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663045721929&
+2022-09-13 13:08:59.289 [http-nio-9998-exec-10] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663045739268&
+2022-09-13 13:09:44.552 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663045784528&
+2022-09-13 13:10:42.515 [http-nio-9998-exec-6] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663045842462&
+2022-09-13 13:10:50.649 [http-nio-9998-exec-6] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663045850627&
+2022-09-13 13:11:36.820 [http-nio-9998-exec-8] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=d8e60d827322f22c3ad7ba3dc558eca5&hoscode=1000_0&timestamp=1663045896792&
+2022-09-13 13:13:33.006 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-13 13:13:33.009 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-09-13 13:13:33.015 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

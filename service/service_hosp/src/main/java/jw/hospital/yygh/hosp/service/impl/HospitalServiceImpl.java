@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import jw.hospital.yygh.hosp.repository.HospitalRespository;
 import jw.hospital.yygh.hosp.service.HospitalService;
 import jw.hospital.yygh.model.hosp.Hospital;
+import jw.hospital.yygh.model.hosp.HospitalSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,8 +47,8 @@ public class HospitalServiceImpl implements HospitalService {
     }
 
     @Override
-    public List<Hospital> show() {
-        return hospitalRespository.findAll();
+    public Hospital getByHoscode(String hoscode) {
+        return hospitalRespository.getHospitalByHoscode(hoscode);
     }
 
 }

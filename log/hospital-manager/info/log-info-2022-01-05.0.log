@@ -1,0 +1,36 @@
+2021-09-07 19:21:13.980 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Starting HospitalManageApplication on DESKTOP-K470VMD with PID 17468 (C:\Users\zhang\Desktop\Hospital-master\appointment-register\hospital-manage\target\classes started by zhang in C:\Users\zhang\Desktop\Hospital-master\appointment-register)
+2021-09-07 19:21:14.046 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - The following profiles are active: dev
+2021-09-07 19:21:14.193 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-07 19:21:14.193 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-07 19:21:19.046 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-07 19:21:19.813 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2021-09-07 19:21:19.830 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2021-09-07 19:21:19.832 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-09-07 19:21:19.833 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-09-07 19:21:20.117 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-09-07 19:21:20.118 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5924 ms
+2021-09-07 19:21:20.574 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-09-07 19:21:21.397 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-09-07 19:21:22.530 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-07 19:21:22.767 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-07 19:21:23.823 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-09-07 19:21:23.858 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-09-07 19:21:23.938 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-09-07 19:21:23.974 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2021-09-07 19:21:24.009 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2021-09-07 19:21:24.016 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Started HospitalManageApplication in 12.474 seconds (JVM running for 16.654)
+2021-09-07 19:29:29.999 [http-nio-9998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-07 19:29:30.020 [http-nio-9998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-09-07 19:29:30.160 [http-nio-9998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 139 ms
+2021-09-07 19:29:30.539 [http-nio-9998-exec-1] INFO  j.h.h.service.impl.HospitalServiceImpl - {"amount":"100","birthdate":"Sat Jun 10 00:00:00 CST 2000","districtCode":"110105","address":"北京市","hosScheduleId":"6134ba588f067176ff1610dd","provinceCode":"110000","cityCode":"110100","sex":"0","contactsCertificatesType":"","sign":"70b670e2f3919483b26300136b0a58a7","hoscode":"123456789","isMarry":"0","contactsName":"","certificatesNo":"1234646351351651351","contactsPhone":"","contactsCertificatesNo":"","phone":"15119443172","reserveTime":"0","name":"张晓琪","depcode":"200040878","reserveDate":"2021-09-10","certificatesType":"10","timestamp":"1631014169457"}
+2021-09-07 19:29:30.838 [http-nio-9998-exec-1] INFO  j.h.h.service.impl.HospitalServiceImpl - {"address":"北京市","birthdate":"Sat Jun 10 00:00:00 CST 2000","certificatesNo":"1234646351351651351","certificatesType":"10","cityCode":"110100","contactsCertificatesNo":"","contactsCertificatesType":"","contactsName":"","contactsPhone":"","districtCode":"110105","isMarry":0,"name":"张晓琪","param":{},"phone":"15119443172","provinceCode":"110000","sex":0}
+2021-09-07 19:37:02.851 [http-nio-9998-exec-3] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：4|123456789|1631014622701|ba27058f8dcbf42c1523b4b7881a1c07
+2021-09-07 19:37:02.902 [http-nio-9998-exec-3] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：d3312780660040d5f4e2651531f3c355
+2021-09-07 20:19:38.288 [http-nio-9998-exec-7] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：null|123456789|1631017177803|ba27058f8dcbf42c1523b4b7881a1c07
+2021-09-07 20:19:38.367 [http-nio-9998-exec-7] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：565a7541eda50c4b7517e2e8adf0b6bc
+2021-09-07 20:19:38.933 [http-nio-9998-exec-8] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：null|123456789|1631017178897|ba27058f8dcbf42c1523b4b7881a1c07
+2021-09-07 20:19:38.934 [http-nio-9998-exec-8] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：44ea8089ffc698de52672a8b584ff89a
+2021-09-07 23:37:47.289 [http-nio-9998-exec-10] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：2|123456789|1631029066959|ba27058f8dcbf42c1523b4b7881a1c07
+2021-09-07 23:37:47.329 [http-nio-9998-exec-10] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：25e73a22fa04d7afc39659677782a90e
+2021-09-07 23:37:48.132 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：2|123456789|1631029068094|ba27058f8dcbf42c1523b4b7881a1c07
+2021-09-07 23:37:48.133 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：023007e61b88e52fb20b29c8ba44adf0
