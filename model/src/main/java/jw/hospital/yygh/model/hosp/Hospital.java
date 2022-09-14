@@ -5,8 +5,13 @@ import jw.hospital.yygh.model.base.BaseMongoEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.data.mongodb.core.index.HashedIndex;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.beans.Transient;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>
@@ -19,9 +24,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @ApiModel(description = "Hospital")
 @Document("Hospital")
 public class Hospital extends BaseMongoEntity {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@ApiModelProperty(value = "医院编号")
 	@Indexed(unique = true) //唯一索引
 	private String hoscode;

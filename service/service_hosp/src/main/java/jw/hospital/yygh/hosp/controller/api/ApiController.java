@@ -12,7 +12,9 @@ import jw.hospital.yygh.hosp.service.HospitalSetService;
 import jw.hospital.yygh.hosp.service.ScheduleService;
 import jw.hospital.yygh.model.hosp.Department;
 import jw.hospital.yygh.model.hosp.Hospital;
+import jw.hospital.yygh.model.hosp.Schedule;
 import jw.hospital.yygh.vo.hosp.DepartmentQueryVo;
+import jw.hospital.yygh.vo.hosp.ScheduleQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.HttpRequestHandler;
 import org.springframework.web.bind.annotation.*;
@@ -65,6 +67,20 @@ public class ApiController {
 //        }
         scheduleService.save(paramMap);
         return Result.ok();
+
+    }
+    @PostMapping("schedule/list")
+    public Result findSchedule(HttpServletRequest request){
+        Map<String, String[]> parameterMap = request.getParameterMap();
+        Map<String, Object> map = HttpRequestHelper.switchMap(parameterMap);
+        int limit = Integer.parseInt(map.get("limit").toString());
+        int page = Integer.parseInt(map.get("page").toString());
+
+        ScheduleQueryVo scheduleQueryVo = new ScheduleQueryVo();
+        scheduleQueryVo.setHoscode(map.get("hoscode").toString());
+        Page<Schedule> schedulePage = scheduleService.findSchedule(page,limit,scheduleQueryVo);
+
+        return Result.ok(schedulePage);
 
     }
 
@@ -155,6 +171,17 @@ public class ApiController {
         String depcode = (String) paramMap.get("depcode");
 
         departmentService.remove(hoscode,depcode);
+
+        return Result.ok();
+    }
+    @PostMapping("/schedule/remove")
+    public Result removeSchedule(HttpServletRequest request){
+        Map<String, String[]> parameterMap = request.getParameterMap();
+        Map<String, Object> paramMap = HttpRequestHelper.switchMap(parameterMap);
+        String hoscode = (String) paramMap.get("hoscode");
+        String hosScheduleId = (String) paramMap.get("hosScheduleId");
+
+        scheduleService.remove(hoscode,hosScheduleId);
 
         return Result.ok();
     }

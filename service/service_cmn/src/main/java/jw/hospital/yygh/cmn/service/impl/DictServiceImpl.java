@@ -1,6 +1,7 @@
 package jw.hospital.yygh.cmn.service.impl;
 
 import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import jw.hospital.yygh.cmn.listener.DictListener;
@@ -74,6 +75,33 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         }
     }
 
+    @Override
+    public String getDictName(String dictCode, String value) {
+        if(StringUtils.isEmpty(dictCode)){
+            QueryWrapper<Dict> wrapper = new QueryWrapper<>();
+            wrapper.eq("value",value);
+            return baseMapper.selectOne(wrapper).getName();
+        } else {
+            Dict codeDict = this.getDictByDictCode(dictCode);
+            Long parent_id = codeDict.getParentId();
+            return baseMapper.selectOne(new QueryWrapper<Dict>()
+            .eq("parent_id",parent_id)
+            .eq("value",value)).getName();
+        }
+    }
+
+    @Override
+    public List<Dict> findByDictCode(String dictCode) {
+        Dict dict = getDictByDictCode(dictCode);
+        List<Dict> dictList = this.findChildData(dict.getId());
+        return dictList;
+    }
+
+    private Dict getDictByDictCode(String dictCode){
+        QueryWrapper<Dict> wrapper = new QueryWrapper<>();
+        wrapper.eq("dict_code",dictCode);
+        return baseMapper.selectOne(wrapper);
+    }
     //    判断id下面是否有子节点
     private boolean isChildren(Long id){
         QueryWrapper<Dict> wrapper = new QueryWrapper<>();

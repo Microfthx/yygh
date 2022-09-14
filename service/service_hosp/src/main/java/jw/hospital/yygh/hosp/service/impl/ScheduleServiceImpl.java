@@ -8,6 +8,7 @@ import jw.hospital.yygh.hosp.service.ScheduleService;
 import jw.hospital.yygh.model.hosp.Department;
 import jw.hospital.yygh.model.hosp.Schedule;
 import jw.hospital.yygh.vo.hosp.DepartmentQueryVo;
+import jw.hospital.yygh.vo.hosp.ScheduleQueryVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
@@ -38,6 +39,32 @@ public class ScheduleServiceImpl implements ScheduleService {
             schedule.setUpdateTime(new Date());
             schedule.setIsDeleted(0);
             scheduleRespository.save(schedule);
+        }
+    }
+
+    @Override
+    public Page<Schedule> findSchedule(int page, int limit, ScheduleQueryVo scheduleQueryVo) {
+//        paramMap 转换
+//        String paramMapString = JSONObject.toJSONString(paramMap);
+//        Department department = JSONObject.parseObject(paramMapString,Department.class);
+
+        Pageable pageable = PageRequest.of(page-1,limit);
+        Schedule schedule = new Schedule();
+        BeanUtils.copyProperties(scheduleQueryVo,schedule);
+        schedule.setIsDeleted(0);
+        ExampleMatcher matcher = ExampleMatcher.matching()
+                .withIgnoreCase(true)
+                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING);
+        Example<Schedule> example = Example.of(schedule,matcher);
+        return scheduleRespository.findAll(example,pageable);
+    }
+
+    @Override
+    public void remove(String hoscode, String hosScheduleId) {
+
+        Schedule schedule = scheduleRespository.getScheduleByHoscodeAndHosScheduleId(hoscode, hosScheduleId);
+        if(schedule!=null){
+            scheduleRespository.deleteById(schedule.getId());
         }
     }
 }
