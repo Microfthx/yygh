@@ -1,6 +1,7 @@
 package jw.hospital.yygh.hosp.service;
 
 import jw.hospital.yygh.model.hosp.Hospital;
+import jw.hospital.yygh.model.hosp.Schedule;
 import jw.hospital.yygh.vo.hosp.HospitalQueryVo;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -22,4 +23,12 @@ public interface HospitalService {
     Hospital getByHoscode(String hoscode);
 
     Page<Hospital> selectHospPage(Integer page, Integer limit, HospitalQueryVo hospitalQueryVo);
+
+    void updateStatus(String id, Integer status);
+
+    Map<String,Object> getHospById(String id);
+
+    Schedule getScheduleDetail(String hoscode, String depcode, String workDate);
+
+    Map<String,Object> getScheduleByHoscode(String hoscode);
 }

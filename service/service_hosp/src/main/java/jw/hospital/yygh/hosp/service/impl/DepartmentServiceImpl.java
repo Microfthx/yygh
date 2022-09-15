@@ -1,6 +1,8 @@
 package jw.hospital.yygh.hosp.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import jw.hospital.yygh.common.result.Result;
+import jw.hospital.yygh.vo.hosp.DepartmentVo;
 import org.springframework.data.domain.*;
 import jw.hospital.yygh.hosp.repository.DepartmentRespository;
 import jw.hospital.yygh.hosp.service.DepartmentService;
@@ -11,7 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @author HXLY
@@ -67,5 +72,39 @@ public class DepartmentServiceImpl implements DepartmentService {
         if(department!=null){
             departmentRespository.deleteById(department.getId());
         }
+    }
+
+    @Override
+    public LinkedList<DepartmentVo> findDeptTree(String hoscode) {
+        LinkedList<DepartmentVo> list = new LinkedList<>();
+        Department departmentQuery = new Department();
+        Example<Department> example = Example.of(departmentQuery);
+        List<Department> all = departmentRespository.findAll(example);
+        Map<String, List<Department>> departmentMap =
+                all.stream().collect(Collectors.groupingBy(Department::getBigcode));
+        for(Map.Entry<String,List<Department>> entry : departmentMap.entrySet()){
+            String bigCode = entry.getKey();
+            List<Department> departmentList = entry.getValue();
+
+            //封装大科室
+            DepartmentVo departmentVo = new DepartmentVo();
+            departmentVo.setDepcode(bigCode);
+            departmentVo.setDepname(departmentList.get(0).getDepname());
+
+            //封装小科室
+            List<DepartmentVo> children = new LinkedList<>();
+            for (Department department : departmentList) {
+                DepartmentVo departmentVo1 = new DepartmentVo();
+                departmentVo1.setDepcode(department.getDepcode());
+                departmentVo1.setDepname(department.getDepname());
+                children.add(departmentVo1);
+            }
+
+            departmentVo.setChildren(children);
+
+            list.add(departmentVo);
+        }
+
+        return list;
     }
 }

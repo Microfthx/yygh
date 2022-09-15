@@ -3,19 +3,18 @@ package jw.hospital.yygh.hosp.service.impl;
 import com.alibaba.fastjson.JSONObject;
 import jw.hospital.yygh.cmn.DictFeignClient;
 import jw.hospital.yygh.hosp.repository.HospitalRespository;
+import jw.hospital.yygh.hosp.repository.ScheduleRespository;
 import jw.hospital.yygh.hosp.service.HospitalService;
 import jw.hospital.yygh.model.hosp.Hospital;
 import jw.hospital.yygh.model.hosp.HospitalSet;
+import jw.hospital.yygh.model.hosp.Schedule;
 import jw.hospital.yygh.vo.hosp.HospitalQueryVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author HXLY
@@ -28,6 +27,9 @@ public class HospitalServiceImpl implements HospitalService {
 
     @Autowired
     private HospitalRespository hospitalRespository;
+
+    @Autowired
+    private ScheduleRespository scheduleRespository;
 
     @Autowired
     private DictFeignClient dictFeignClient;
@@ -77,12 +79,46 @@ public class HospitalServiceImpl implements HospitalService {
         return pages;
     }
 
+    @Override
+    public void updateStatus(String id, Integer status) {
+        Hospital hospital = hospitalRespository.findById(id).get();
+        hospital.setStatus(status);
+        hospital.setUpdateTime(new Date());
+        hospitalRespository.save(hospital);
+    }
+
+    @Override
+    public Map<String,Object> getHospById(String id) {
+        Map<String,Object> resMap = new HashMap<>();
+        Hospital hospital = this.setHospitalHosType(hospitalRespository.findById(id).get());
+        resMap.put("hospital",hospital);
+        resMap.put("bookingRule",hospital.getBookingRule());
+
+        hospital.setBookingRule(null);
+        return resMap;
+    }
+
+    @Override
+    public Schedule getScheduleDetail(String hoscode, String depcode, String workDate) {
+        Schedule schedule = scheduleRespository.getScheduleByHoscodeAndDepcodeAndWorkDate(hoscode, depcode, workDate);
+        return schedule;
+    }
+
+    @Override
+    public Map<String,Object> getScheduleByHoscode(String hoscode) {
+        Map<String,Object> resMap = new HashMap<>();
+
+        List<Schedule> scheduleList = scheduleRespository.getSchedulesByHoscode(hoscode);
+        resMap.put("scheduleList",scheduleList);
+        return resMap;
+    }
+
     private Hospital setHospitalHosType(Hospital hospital) {
         String hostypeString = dictFeignClient.getName("Hostype", hospital.getHostype());
         String provinceString = dictFeignClient.getName(hospital.getProvinceCode());
         String cityString = dictFeignClient.getName(hospital.getCityCode());
         hospital.getParam().put("hostypeString",hostypeString);
-        hospital.getParam().put("fullAddress",provinceString+cityString+hostypeString);
+        hospital.getParam().put("fullAddress",provinceString+cityString);
         return hospital;
     }
 

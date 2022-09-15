@@ -2,6 +2,7 @@ package jw.hospital.yygh.hosp.service;
 
 import jw.hospital.yygh.model.hosp.Department;
 import jw.hospital.yygh.vo.hosp.DepartmentQueryVo;
+import jw.hospital.yygh.vo.hosp.DepartmentVo;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 
@@ -16,4 +17,6 @@ public interface DepartmentService {
     Page<Department> getDepartmentList(int page, int limit, DepartmentQueryVo departmentQueryVo);
 
     void remove(String hoscode, String depcode);
+
+    List<DepartmentVo> findDeptTree(String hoscode);
 }
