@@ -107,4 +107,13 @@ public class DepartmentServiceImpl implements DepartmentService {
 
         return list;
     }
+
+    @Override
+    public String getDepName(String hoscode,String depcode) {
+        Department department = departmentRespository.getDepartmentByHoscodeAndDepcode(hoscode, depcode);
+        if(department != null){
+            return department.getDepname();
+        }
+        return null;
+    }
 }

@@ -113,6 +113,15 @@ public class HospitalServiceImpl implements HospitalService {
         return resMap;
     }
 
+    @Override
+    public String getHospName(String hoscode) {
+        Hospital hospital = hospitalRespository.getHospitalByHoscode(hoscode);
+        if(hospital != null){
+            return hospital.getHosname();
+        }
+        return null;
+    }
+
     private Hospital setHospitalHosType(Hospital hospital) {
         String hostypeString = dictFeignClient.getName("Hostype", hospital.getHostype());
         String provinceString = dictFeignClient.getName(hospital.getProvinceCode());

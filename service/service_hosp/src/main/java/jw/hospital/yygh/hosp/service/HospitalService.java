@@ -31,4 +31,6 @@ public interface HospitalService {
     Schedule getScheduleDetail(String hoscode, String depcode, String workDate);
 
     Map<String,Object> getScheduleByHoscode(String hoscode);
+
+    String getHospName(String hoscode);
 }

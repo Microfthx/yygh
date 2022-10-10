@@ -32,6 +32,7 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     //医院列表
+    @ApiOperation(value = "查询医院所有科室列表")
     @GetMapping("getDeptList/{hoscode}")
     public Result getDeptList(@PathVariable String hoscode){
         List<DepartmentVo> list = departmentService.findDeptTree(hoscode);
