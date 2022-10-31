@@ -34,7 +34,6 @@ import java.util.Map;
 @Api(tags = "医院api")
 @RestController
 @RequestMapping("/api/hosp")
-@CrossOrigin
 public class ApiController {
 
     @Autowired
