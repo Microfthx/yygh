@@ -1,4 +1,4 @@
-package jw.hospital.enums;
+package jw.hospital.yygh.enums;
 
 public enum PaymentTypeEnum {
     ALIPAY(1,"支付宝"),

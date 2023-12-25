@@ -1,4 +1,4 @@
-package jw.hospital.enums;
+package jw.hospital.yygh.enums;
 
 public enum RefundStatusEnum {
     UNREFUND(1,"退款中"),

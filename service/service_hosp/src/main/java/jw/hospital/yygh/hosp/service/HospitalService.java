@@ -33,4 +33,8 @@ public interface HospitalService {
     Map<String,Object> getScheduleByHoscode(String hoscode);
 
     String getHospName(String hoscode);
+
+    List<Hospital> findByHosName(String hosname);
+
+    Map<String, Object> item(String hoscode);
 }

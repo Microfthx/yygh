@@ -1,4 +1,4 @@
-package jw.hospital.enums;
+package jw.hospital.yygh.enums;
 public enum PaymentStatusEnum {
     UNPAID(1,"支付中"),
     PAID(2,"已支付");

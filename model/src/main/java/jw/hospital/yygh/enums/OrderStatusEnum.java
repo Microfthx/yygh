@@ -1,4 +1,4 @@
-package jw.hospital.enums;
+package jw.hospital.yygh.enums;
 
 import java.util.ArrayList;
 import java.util.HashMap;

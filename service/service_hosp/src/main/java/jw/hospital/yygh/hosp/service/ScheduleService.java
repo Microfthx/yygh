@@ -2,6 +2,7 @@ package jw.hospital.yygh.hosp.service;
 
 
 import jw.hospital.yygh.model.hosp.Schedule;
+import jw.hospital.yygh.vo.hosp.ScheduleOrderVo;
 import jw.hospital.yygh.vo.hosp.ScheduleQueryVo;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -22,4 +23,12 @@ public interface ScheduleService {
     Map<String, Object> getRuleSchedule(long page, long limit, String hoscode, String depcode);
 
     List<Schedule> getRuleScheduleDetail(String hoscode, String depcode, String workDate);
+
+    Map<String, Object> getBookingScheduleRule(Integer page, Integer limit, String hoscode, String depcode);
+
+    List<Schedule> getDetailSchedule(String hoscode, String depcode, String workDate);
+
+    Schedule getScheduleId(String scheduleId);
+
+    ScheduleOrderVo getScheduleOrderVo(String scheduleId);
 }

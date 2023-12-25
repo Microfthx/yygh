@@ -89,7 +89,7 @@ public class DepartmentServiceImpl implements DepartmentService {
             //封装大科室
             DepartmentVo departmentVo = new DepartmentVo();
             departmentVo.setDepcode(bigCode);
-            departmentVo.setDepname(departmentList.get(0).getDepname());
+            departmentVo.setDepname(departmentList.get(0).getBigname());
 
             //封装小科室
             List<DepartmentVo> children = new LinkedList<>();
@@ -115,5 +115,10 @@ public class DepartmentServiceImpl implements DepartmentService {
             return department.getDepname();
         }
         return null;
+    }
+
+    @Override
+    public Department getDepartment(String hoscode, String depcode) {
+        return departmentRespository.getDepartmentByHoscodeAndDepcode(hoscode,depcode);
     }
 }

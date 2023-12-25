@@ -10,12 +10,34 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>service_user</artifactId>
-    <packaging>pom</packaging>
-
     <dependencies>
+        <!--        <dependency>-->
+        <!--            <groupId>jw.hmanage</groupId>-->
+        <!--            <artifactId>hospital-manage</artifactId>-->
+        <!--            <version>0.0.1-SNAPSHOT</version>-->
+        <!--            <scope>compile</scope>-->
+        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>jw.hospital</groupId>
-            <artifactId>common-util</artifactId>
+            <artifactId>service_cmn_client</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
+
 </project>

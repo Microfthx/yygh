@@ -14,6 +14,7 @@
         <module>service</module>
         <module>service_client</module>
         <module>service_gateway</module>
+        <module>service_order</module>
     </modules>
     <!--    <modules>-->
 <!--        <module>common</module>-->

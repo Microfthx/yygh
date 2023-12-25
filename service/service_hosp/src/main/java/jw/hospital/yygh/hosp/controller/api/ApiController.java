@@ -1,10 +1,8 @@
 package jw.hospital.yygh.hosp.controller.api;
 
-import com.alibaba.fastjson.JSONObject;
 import io.swagger.annotations.Api;
 import jw.hospital.yygh.common.helper.HttpRequestHelper;
 import jw.hospital.yygh.common.result.Result;
-import jw.hospital.yygh.common.result.ResultCodeEnum;
 import jw.hospital.yygh.common.utils.MD5;
 import jw.hospital.yygh.hosp.service.DepartmentService;
 import jw.hospital.yygh.hosp.service.HospitalService;
@@ -16,13 +14,10 @@ import jw.hospital.yygh.model.hosp.Schedule;
 import jw.hospital.yygh.vo.hosp.DepartmentQueryVo;
 import jw.hospital.yygh.vo.hosp.ScheduleQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.HttpRequestHandler;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Page;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 import java.util.Map;
 
 /**
